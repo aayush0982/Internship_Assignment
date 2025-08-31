@@ -1,7 +1,8 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import { saveNameEmailToDatabase } from "../../user/saveNameEmail/route";
+
 import { saveEmailToLocalStorage, saveNameToLocalStorage } from "@/app/lib/storage";
+import { saveNameEmailToDatabase } from "@/app/lib/saveNameEmail";
 
 let userId="";
 let userName="";
