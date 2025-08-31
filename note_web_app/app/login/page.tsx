@@ -4,9 +4,8 @@ import { useActionState, useState, useTransition } from "react";
 import { useFormStatus } from "react-dom";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
-import { saveNameToLocalStorage } from "../api/user/saveToLocalStorage/route";
-import { saveEmailToLocalStorage } from "../api/user/saveEmailtoLocal/route";
 import { signin } from "./signinaction";
+import { saveEmailToLocalStorage } from "../lib/storage";
 
 const sendOTPEmail = async (email: string, otp: string): Promise<{ success: boolean; error?: string }> => {
   try {
